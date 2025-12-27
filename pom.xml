@@ -5,15 +5,15 @@
 	<groupId>com.mt</groupId>
 	<artifactId>maven-web-application</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.5-RELEASE</version>
 	
 	<name>maven-web-application</name>
 
 	<description>Maven Web Project for Java Project</description>
 
 	<organization>
-		<name>Hari Nair Technologies</name>
-		<url>http://harinair198.com/</url>
+		<name> Clahan Technologies</name>
+		<url>http://ClahanTechnologies.com/</url>
 	</organization>
 
 	<properties>
@@ -21,9 +21,9 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://172.31.33.143:9000/</sonar.host.url>
+		<sonar.host.url>http://52.66.206.190:9000</sonar.host.url>
 		<sonar.login>admin</sonar.login>
-		<sonar.password>passw0rd</sonar.password> 
+		<sonar.password>Hari_105$</sonar.password> 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
@@ -97,14 +97,14 @@
 	
 	    <repository>
 	      <id>nexus</id>
-	      <name>Hari Nair Releases Nexus Repository</name>
-	      <url>http://172.31.42.154:9980/harinair1985/repository/canarabank-snapshot/</url>
+	      <name>maven-app-release</name>
+	      <url>http://52.203.71.141:8081/repository/maven-app-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>Hari Nair Snapshot Nexus Repository </name>
-	      <url>http://172.31.42.154:9980/harinair1985/repository/canarabank-release/</url>
+	      <name>maven-app-snapshot</name>
+	      <url>http://52.203.71.141:8081/repository/maven-app-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
@@ -113,11 +113,6 @@
 		<finalName>maven-web-application</finalName>
 		
 		<plugins>
-			<plugin>
-                            <groupId>org.apache.maven.plugins</groupId>
-                            <artifactId>maven-war-plugin</artifactId>
-                            <version>3.3.2</version>
-                        </plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -142,14 +137,14 @@
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>2.9</version>
-				<configuration>
-					<downloadSources>true</downloadSources>
-					<downloadJavadocs>true</downloadJavadocs>
-					<wtpversion>2.0</wtpversion>
-					<wtpContextName>maven-web-application</wtpContextName>
-				</configuration>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.3.2</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.11.0.3922</version>
 			</plugin>
 			
 </plugins>
